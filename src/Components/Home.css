@@ -1,0 +1,34 @@
+.home {
+  display: "flex";
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
+/* use the entire space avaliable */
+.home__row {
+  display: flex;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.product:hover {
+  border: 2px solid transparent;
+  background-clip: border-box;
+  transform: scale(1.02);
+  backdrop-filter: black;
+  transition-duration: 2ms;
+  transition: ease;
+  transform-style: preserve-3d;
+}
+.home__image {
+  width: 100%;
+  z-index: -1; /*to place this banner behind other items */
+  margin-bottom: -100px; /*to allow below content to creep in */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  ); /*to give a gradient apperance*/
+}
